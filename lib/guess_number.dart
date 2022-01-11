@@ -62,10 +62,10 @@ String playGame(var input, var game) {
     var result = game.doGuess(guess);
 
     if (result == 1) {
-      textShow  =  '$guess  ▲ มากเกินไป กรุณาลองใหม';
+      textShow  =  '$guess มากเกินไป กรุณาลองใหม่ ❤';
       return textShow ;
     } else if (result == -1) {
-      textShow  =  '$guess ▼ น้อยเกินไป กรุณาลองใหม';
+      textShow  =  '$guess น้อยเกินไป กรุณาลองใหม่ ❤';
       return textShow ;
     } else if (result == 0) {
       textShow  =  '$guess ถูกต้องนะครับ ❤, คุณทายทั้งหมด : ${game.guessCount} ครั้ง';
