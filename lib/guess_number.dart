@@ -73,7 +73,7 @@ String playGame(var input, var game) {
       //Game.guessCountList.add(game.guessCount);
       //Game().addCountList();
     }else if (result == 4) {
-      textShow  = 'กรอกข้อมูลไม่ถูกต้อง ให้กรอกเฉพาะตัวเลขเท่านั้น!';
+      textShow  = 'กรอกข้อมูลไม่ถูกต้อง ให้กรอกเฉพาะตัวเลขเท่านั้น';
       isCorrect = true;
       return textShow ;
     }
