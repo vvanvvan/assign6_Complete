@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget {
 
   final _controller = TextEditingController(); //or TextEditingController _controller = TextEditingController().  var _controller = TextEditingController();
   var gameCount = Game(maxRandom: 100+1);
+  String texterror = 'RESULT';
 
   @override
   Widget build(BuildContext context) {
@@ -102,17 +103,19 @@ class HomePage extends StatelessWidget {
                   onPressed: () {
                     var input = _controller.text;
                     var text = playGame(input,gameCount);
-                    String error = 'RESULT';
-                    if(text == 'กรอกข้อมูลไม่ถูกต้อง ให้กรอกเฉพาะตัวเลขเท่านั้น'){
-                      error = 'ERROR';
+                    var text2 = int.tryParse(input);
+                    if(text2 == null){
+                      texterror = 'ERROR';
                     }
+                    ////var g = new Game();
+                    ////var error = Game().doGuess(num);
 
                     showDialog(
                       context: context,
                       barrierDismissible: false,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: Text(error),
+                          title: Text(texterror),
                           content: Text(text),
                           actions: [
                             TextButton(

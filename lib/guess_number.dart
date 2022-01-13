@@ -81,3 +81,9 @@ String playGame(var input, var game) {
   return textShow ;
 
 }
+
+int? TextDialog(var tx){
+  var g =  tx;
+  return g;
+
+}
