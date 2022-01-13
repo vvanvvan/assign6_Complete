@@ -102,13 +102,16 @@ class HomePage extends StatelessWidget {
                   child: Text('GUESS'),
                   onPressed: () {
                     var input = _controller.text;
+
+                    /*var new55555 = int.parse(input);
+                    if(new55555 >= 0 || new55555 <= 100 ){
+                      texterror = 'RESULT';
+                      ////print(texterror);
+                    }*/
                     var text = playGame(input,gameCount);
-                    var text2 = int.tryParse(input);
-                    if(text2 == null){
-                      texterror = 'ERROR';
-                    }
                     ////var g = new Game();
                     ////var error = Game().doGuess(num);
+
 
                     showDialog(
                       context: context,
