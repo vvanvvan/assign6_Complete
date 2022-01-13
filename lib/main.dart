@@ -109,9 +109,18 @@ class HomePage extends StatelessWidget {
                       ////print(texterror);
                     }*/
                     var text = playGame(input,gameCount);
+<<<<<<< HEAD
+                    var text2 = int.tryParse(input);
+                    if(text2 == null){
+                      texterror = 'ERROR';
+                    }
+                    ////var g = new Game();
+                    ////var error = Game().doGuess(num);
+=======
                     ////var g = new Game();
                     ////var error = Game().doGuess(num);
 
+>>>>>>> origin/master
 
                     showDialog(
                       context: context,
